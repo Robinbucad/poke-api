@@ -1,0 +1,160 @@
+
+.header-login-page{
+    display: flex;
+    padding-left: 7rem;
+    margin-top: -5rem;
+}
+
+.container-login{
+    display: flex;
+}
+
+.header-login{
+    padding: 2rem;
+    background-color: gray;
+}
+
+.fa-arrow-left{
+    font-size: 50px;
+    color: black;
+}
+
+.arrow-back{
+   position: relative;
+   top: -11.2rem;
+   left: -19rem;
+}
+
+.left-login{
+    background-image: url("../../assets/img/back-ground-login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 61%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -30px;
+
+}
+
+.right-login{
+    background-image: url('../../assets/img/right-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    width: 41.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: space-around;
+    margin-top: -10rem;
+}
+
+.login-title{
+    font-size: 55px;
+}
+
+.login-subtitle{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.div-icons{
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-facebook-official{
+    color: blue;
+    font-size: 50px;
+    margin-bottom: -20px;
+    cursor: pointer;
+}
+
+.fa-google-plus-square{
+    color: red;
+    font-size: 50px;
+    cursor: pointer;
+}
+.fa-linkedin-square{
+    color: blue;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.inputs-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputs-login{
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+}
+
+.btn-sign-in{
+    padding:15px;
+    width: 200px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: inset 1px -14px 25px -14px #000000;
+    background-color: #52bf90;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-sign-in:hover{
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.signup-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: space-around;
+    color: black;
+}
+
+.title-signup{
+    font-size: 55px;
+}
+
+.subtitle-signup{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.btn-signup{
+    padding:15px;
+    width: 200px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(98,98,98,1) 28%, rgba(144,144,144,1) 100%);
+    box-shadow: inset 1px -14px 25px -14px #000000;
+}
+
+.btn-signup:hover{
+    box-shadow: none;
+    transition: 0.2s;
+}

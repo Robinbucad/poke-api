@@ -1,0 +1,37 @@
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    background: rgb(98,98,98);
+    background: linear-gradient(90deg, rgba(98,98,98,1) 28%, rgba(144,144,144,1) 100%);
+}
+
+.footer-btn{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background: rgb(98,98,98);
+    background: linear-gradient(90deg, rgba(98,98,98,1) 28%, rgba(144,144,144,1) 100%) ;
+}
+
+.btn-load{
+    padding:1rem;
+    width: 100px;
+    background-color: #3366ff;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: inset 1px -14px 25px -14px #000000;
+}
+
+.btn-load:hover{
+    box-shadow: none;
+    transition: 0.2s;
+}

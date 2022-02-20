@@ -1,0 +1,46 @@
+
+
+.card-shiny-pokemon {
+    border: 1px solid black;
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:	#d6d6d6;
+    box-shadow: 2px 2px 22px 4px #000000;
+    padding: 2rem;
+}
+
+.shiny-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.shiny-container::before{
+    content: '';
+    justify-content: center;
+    background-image: url("../../assets/img/pokemon-background-ty.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    margin-top: 92px;
+}
+
+.shiny-container > *{
+    position: relative;
+    z-index: 10;
+
+}
+
+.img-shiny-pokemon{
+    width: 30rem;
+    
+}
