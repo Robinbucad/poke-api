@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/poke-api/static/css/main.da595df1.css",
+    "main.js": "/poke-api/static/js/main.7f11d160.js",
+    "static/js/787.31b5add8.chunk.js": "/poke-api/static/js/787.31b5add8.chunk.js",
+    "static/media/back-ground-form.jpg": "/poke-api/static/media/back-ground-form.061b8f7c1b4685553d7a.jpg",
+    "static/media/header-background.png": "/poke-api/static/media/header-background.974f592c61e86f810bda.png",
+    "static/media/pokemon-background-ty.jpg": "/poke-api/static/media/pokemon-background-ty.0fcb09d96059929c3a36.jpg",
+    "static/media/back-ground-login.jpg": "/poke-api/static/media/back-ground-login.488b4186f1526a51856b.jpg",
+    "static/media/pikachu-error.gif": "/poke-api/static/media/pikachu-error.939afdb57a93bb12cbd8.gif",
+    "static/media/right-background.jpg": "/poke-api/static/media/right-background.4fa9bdf7c53505c0fcb3.jpg",
+    "static/media/404poke.png": "/poke-api/static/media/404poke.006b07aee42ec6963e3b.png",
+    "static/media/image-redirect.gif": "/poke-api/static/media/image-redirect.58b77057d93834cf5464.gif",
+    "index.html": "/poke-api/index.html",
+    "main.da595df1.css.map": "/poke-api/static/css/main.da595df1.css.map",
+    "main.7f11d160.js.map": "/poke-api/static/js/main.7f11d160.js.map",
+    "787.31b5add8.chunk.js.map": "/poke-api/static/js/787.31b5add8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da595df1.css",
+    "static/js/main.7f11d160.js"
+  ]
+}
