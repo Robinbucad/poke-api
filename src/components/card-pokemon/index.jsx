@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 function PokemonCard({pokemon}) {
     let [typeNames, updateTypenames] = useState([])
+   
 
     useEffect(() => {
         pokemon.types.forEach((p) => {
@@ -16,8 +17,7 @@ function PokemonCard({pokemon}) {
         })
     },[])
 
-  
-    
+   
   
    // console.log(pokemon.sprites.other.home.front_shiny)
 
@@ -26,13 +26,14 @@ function PokemonCard({pokemon}) {
 
     return (
         <div >          
-            <Link to={`/details/${pokemon.id}`} state={pokemon}>
+            <Link to={`/details/${pokemon.id}`} >
             <article className='card'>
                 <header className='img-header'>
                     <img className='img-pokemon' src={pokemon.sprites.other.dream_world.front_default} />
                 </header>
-        
-                <section className={` ${pokemon.types[0].type.name}`}>
+
+              
+                <section className={` ${pokemon.types[0].type.name}`} id=' card-body-container'>
                     <div>
                         <h1 className='pokeName'>{pokemon.name}</h1>
                     </div>
@@ -43,6 +44,7 @@ function PokemonCard({pokemon}) {
                         <p>{pokemon.id}</p>
                     </footer>
                 </section>
+              
 
             </article>
             </Link>

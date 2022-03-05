@@ -77,3 +77,41 @@
     background:linear-gradient( #6b6a6a 5%, #7b7b7b 100%);
 
 }
+
+.menu-burger{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:425px){
+    .log-in-header{
+        display: none;
+    }
+
+    .main-header{
+        display: flex;
+        justify-content: space-between;
+        width: 110%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .input-search{
+        display:none
+    }
+
+    .fa-search-box{
+        display: none;
+    }
+
+    .menu-burger{
+        display: block;
+    }
+
+    .main-header{
+        display: flex;
+        justify-content: space-between;
+    }
+}

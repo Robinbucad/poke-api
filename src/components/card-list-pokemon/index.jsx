@@ -32,7 +32,7 @@ function PokemonList() {
  
 
     let next = () => {
-        updatefilter('')
+        updatefilter([])
         fetchPokemons(info.next)
    
     }

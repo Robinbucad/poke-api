@@ -9,40 +9,69 @@ import HeaderRoute from "../header"
 
 
 
-function DetailsPokemon() {
+ function DetailsPokemon() {
 
-    let pokemon = useLocation();
-
-
-    let x = pokemon.state
-    console.log(x)
-
-
-    let [typeNames, updateTypenames] = useState([])
-
-    useEffect(() => {
-        x.types.forEach((p) => {
-            typeNames.push(p.type.name);
-            updateTypenames([...typeNames])
-            
-        })
-    },[])
-
-
+    let { id } = useParams('')
+    console.log(id)
     
 
+    let info = `https://pokeapi.co/api/v2/pokemon/${id}`
+    let [pokemonImg, updatePokemonImg] = useState('')
+    let [pokeName, updatePokeName] = useState('')
+    let [setId, updateId] = useState('')
+    let [typesNames, updateTypeNames] = useState([])
     let [setStat, updateStat] = useState([])
     let [baseStat, updateBaseStat] = useState([])
+    let [height, setHeight] = useState('')
+    let [abilities, updateAbilities] = useState ([])
+    let [forms, updateForms] = useState([])
+
+  
+    const PrintDetails = (url) => {
+        fetch(url)
+            .then(r => r.json())
+            .then(data => {
+                data.types.forEach(t => {
+                    typesNames.push(t.type.name)
+                    updateTypeNames([...typesNames])
+                })
+                data.stats.forEach(s => {
+                    setStat.push(s.stat.name)
+                    updateStat([...setStat])
+                })
+                data.stats.forEach(bs => {
+                    baseStat.push(bs.base_stat)
+                    updateBaseStat([...baseStat])
+                })
+                data.abilities.forEach( a => {
+                    abilities.push(a.ability.name)
+                    updateAbilities([...abilities])
+                })
+                data.forms.forEach(f => {
+                    forms.push(f.name)
+                    updateForms([...forms])
+                })
+                console.log(data)
+
+                updateId(data.id)
+                updatePokemonImg(data.sprites.other.home.front_default)
+                updatePokeName(data.name)
+                setHeight(data.height / 10)
+                
+            })
+    }
+
+
+  
+
+
 
     useEffect(() => {
-        x.stats.forEach(s => {
-            setStat.push(s.stat.name)
-            updateStat([...setStat])
-            console.log(s.base_stat)
-            baseStat.push(s.base_stat)
-            updateBaseStat([...baseStat])
-        })
-    },[])
+        PrintDetails(info)
+    }, [id])
+
+
+
 
     return (
         <React.Fragment>
@@ -53,31 +82,31 @@ function DetailsPokemon() {
             <div className="left-container">
                 <div className="left-stats">
                     <p>ID</p>
-                    <p>#{x.id}</p>
+                    <p>#{setId}</p>
                 </div>
                 <div className="left-stats">
                 <p>Height</p>
-                <p>{x.height/100}m</p>
+                <p>{height}m</p>
                 </div>
                 <div className="left-stats ">
                 <p>Abilities</p>
                 <div className="abilities-container">
-                {x.abilities.map((e,i) =><div key={i} className="abilities-details"> <p>{e.ability.name.toUpperCase()}</p> </div>)}
+                {abilities.map(e => <div className="abilities-details"> {e}</div>)}
                 </div>
                 </div>
                 <div className="left-stats">
                     <p>Type</p>
-                    {typeNames.map((type , i) =>(<div id={type}><p key={i} className='type'>{type.toUpperCase()}</p></div>))}
+                    {typesNames.map((type , i) =>(<div id={type}><p key={i} className='type'>{type.toUpperCase()}</p></div>))}
                 </div>
                 <div className="left-stats">
                     <p>Forms</p>
-                    {x.forms.map( e => e.name)}
+                    {forms.map(f => f )}
                 </div>
             </div>
         
             <div className="main-foto-detail">
-                <h1 className="poke-name-details">{x.name.toUpperCase()}</h1>
-               <Link to={`/details/${x.id}/${x.name}`} state={x}> <img className="img-details" src={x.sprites.other.home.front_default} /></Link>
+                <h1 className="poke-name-details">{pokeName}</h1>
+               <Link to={`/details/${setId}/${pokeName}`}> <img className="img-details" src={pokemonImg} /></Link>
                 <h1>Click to see shiny</h1>
             </div>
 

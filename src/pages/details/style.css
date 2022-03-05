@@ -223,3 +223,62 @@
     margin-left: 20px;
     border-radius: 5px;
 }
+
+
+@media screen and (max-width:320px){
+   #grass{
+       display: none;
+   }
+   #bug {
+    display: none;
+}
+
+#water {
+    display: none;
+}
+
+#grass{
+    display: none;
+}
+
+#fire{
+    display: none;
+}
+
+#normal{
+   display: none;
+}
+
+#electric{
+    display: none;
+}
+
+#rock{
+    display: none;
+}
+
+#psychic{
+    display: none;
+}
+
+#fairy {
+    display: none;
+}
+
+#poison {
+    display: none;
+}
+
+#ground {
+   display: none;
+}
+
+#flying {
+    display: none;
+}     
+
+#fighting {
+    display: none;
+}
+
+}

@@ -16,10 +16,7 @@
     transform: scale(1.05) rotate(2deg);
 }
 
-.body-card{
-    height: 300px;
 
-}
 
 .pokeName{
     font-family:'Pokemon Hollow', sans-serif ;
@@ -168,4 +165,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (max-width:768px){
+    .card{
+        width: 350px;
+        height: 200px;
+    }  
+
+    .grass{
+        height: 100px;
+    }
+
+    .footer-id{
+        display: none;
+    }
+
+    .img-pokemon{
+        width: 80px;
+    }
+    .img-header{
+        height: 120px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .card{
+        width: 250px;
+        height: 150px;
+    }  
+
+    .img-pokemon{
+        width: 50px;
+    }
+}
+
+
+@media screen and (max-width:320px){
+    .card{
+        height: 100px;
+        width: 200px;
+    }
+    
+    .img-pokemon{
+        width: 40px;
+    }
+
+    .img-header{
+
+        height: 70px;
+    }
+
+    .pokeName{
+        font-size: 15px;
+    }
+
+    .grass{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-id{
+        display: none;
+    }
+
 }
